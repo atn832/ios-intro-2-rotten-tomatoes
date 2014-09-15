@@ -60,7 +60,7 @@ class MoviesTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         println("table item count called")
-        return 5//movies.count
+        return 1
     }
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
@@ -78,9 +78,6 @@ class MoviesTableViewController: UITableViewController {
         var posterUrl = posterDictionary["thumbnail"] as String
 
         cell.movieImage2.setImageWithURL(NSURL.URLWithString(posterUrl))
-        
-//        cell.movieImage.sizeToFit()
-//        cell.movieImage.sizeThatFits(CGSize(width: 64, height: 64))
         return cell as UITableViewCell
     }
 
@@ -127,8 +124,9 @@ class MoviesTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         var destinationViewController = segue.destinationViewController as DetailViewController
         var tableViewCell = sender as UITableViewCell
-        destinationViewController.movie = nil
-//        tableViewCell.rowIndex?...
+        let index = tableView.indexPathForCell(tableViewCell)
+        let row = index?.row
+        destinationViewController.movie = movies[row!]
     }
 
 }
