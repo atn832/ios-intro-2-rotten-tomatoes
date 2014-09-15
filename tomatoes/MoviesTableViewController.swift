@@ -50,7 +50,7 @@ class MoviesTableViewController: UITableViewController {
                 error: NSError!) in
                 println("Error: " + error.localizedDescription)
         })
-*/
+        */
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,43 +58,29 @@ class MoviesTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
-//
-//    override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
-//        // #warning Potentially incomplete method implementation.
-//        // Return the number of sections.
-//        return 100
-//    }
-
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         println("table item count called")
         return 5//movies.count
     }
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         return movies.count
     }
-//    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell! {
-//        
-//    }
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        // Configure the cell...
-        println("returning cell, start")
         var cell = tableView.dequeueReusableCellWithIdentifier("MovieCell") as MovieTableViewCell
         cell.titleLabel.text = "the title section \(indexPath)"
         let movie = movies[indexPath.row]
         cell.titleLabel.text = movie["title"] as? String
-        cell.descriptionLabel.text = "the description section"
+        cell.descriptionLabel.text = movie["synopsis"] as? String
         
         var posterDictionary = movie["posters"] as NSDictionary
         var posterUrl = posterDictionary["thumbnail"] as String
-//        cell.movieImage.setImageWithURL();
-//        cell.movieImage.set
+
+        cell.movieImage2.setImageWithURL(NSURL.URLWithString(posterUrl))
         
-        println("returning cell")
-//        return UITableViewCell()
-        
+//        cell.movieImage.sizeToFit()
+//        cell.movieImage.sizeThatFits(CGSize(width: 64, height: 64))
         return cell as UITableViewCell
     }
 

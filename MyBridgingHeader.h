@@ -10,5 +10,5 @@
 #define tomatoes_MyBridgingHeader_h
 
 #import <AFNetworking/AFNetworking.h>
-
+#import "UIImageView+AFNetworking.h"
 #endif
