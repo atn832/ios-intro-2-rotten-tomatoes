@@ -4,173 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="DNo-mx-Csb">
-            <objects>
-                <viewController id="Kfz-wF-4Bl" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QbU-Ll-GgP">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Y9r-QL-1gq">
-                                <rect key="frame" x="137" y="269" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="EQs-oA-L28" kind="push" id="YLk-bZ-kT0"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="21C-X2-6jQ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UAi-La-MfM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1408" y="510"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Q4X-8U-pis">
-            <objects>
-                <viewController id="EQs-oA-L28" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ydo-5m-KEm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="d0N-UX-nbU"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="o5e-Fn-vhz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1761" y="509"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="HgJ-C3-7uI">
-            <objects>
-                <viewController id="6pe-zf-Szj" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="eW5-yV-bvk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ARK-Dg-j1l">
-                                <rect key="frame" x="137" y="269" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="bSm-CQ-kfI" kind="push" id="f99-96-MpS"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="JTr-tv-bpv"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Uf9-k6-AVu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="876" y="-120"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="nCC-gr-a16">
-            <objects>
-                <viewController id="bSm-CQ-kfI" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="h54-92-3tU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lAJ-kT-xcp">
-                                <rect key="frame" x="137" y="269" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="5jU-nL-ZiN" kind="modal" id="FUg-8q-5ub"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="uy7-7j-vsw"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TLB-Pd-gBj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1231" y="-120"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="GZA-HH-32x">
-            <objects>
-                <viewController id="5jU-nL-ZiN" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mTd-lt-CKQ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TSs-Hv-XoJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1591" y="-125"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="q8o-M7-HIm">
-            <objects>
-                <tabBarController id="Fl4-ev-mBR" sceneMemberID="viewController">
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="uQw-Jr-yJo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="Ktd-sD-pfO" kind="relationship" relationship="viewControllers" id="DBF-2T-DVA"/>
-                        <segue destination="6BY-cN-bjQ" kind="relationship" relationship="viewControllers" id="6oI-eP-XsJ"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="J5P-57-vZj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-196" y="195"/>
-        </scene>
-        <!--Item 1-->
-        <scene sceneID="Iny-Rh-mkI">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ktd-sD-pfO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="rDJ-0J-G7x"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bkL-yY-7cd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="6pe-zf-Szj" kind="relationship" relationship="rootViewController" id="iLu-od-xMp"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1aM-WM-g06" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="344" y="-120"/>
-        </scene>
-        <!--Item 2-->
-        <scene sceneID="ky5-Li-bcs">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6BY-cN-bjQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="LLs-GZ-p19"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kMS-CU-fbz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Kfz-wF-4Bl" kind="relationship" relationship="rootViewController" id="6uP-Y1-uvM"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lly-3N-Vrx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="876" y="510"/>
-        </scene>
         <!--Movies-->
         <scene sceneID="Qjh-Hc-Blf">
             <objects>
@@ -179,15 +12,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <label key="tableFooterView" hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Network error" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="07x-se-yC9">
+                        <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <label key="tableFooterView" hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Network error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="07x-se-yC9">
                             <rect key="frame" x="0.0" y="-21" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="118" id="to1-M5-dMY" customClass="MovieTableViewCell" customModule="tomatoes" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="118" id="to1-M5-dMY" customClass="MovieTableViewCell" customModule="tomatoes" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="to1-M5-dMY" id="Bfm-h4-OL1">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -196,14 +31,14 @@
                                             <rect key="frame" x="98" y="9" width="181" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.85098046064376831" green="0.87058830261230469" blue="0.87450987100601196" alpha="1" colorSpace="deviceRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QvO-eZ-PnA">
                                             <rect key="frame" x="98" y="30" width="181" height="76.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.78431379795074463" green="0.79607850313186646" blue="0.79607850313186646" alpha="1" colorSpace="deviceRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Rjv-It-9JR">
@@ -211,6 +46,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.078431375319999996" green="0.078431375319999996" blue="0.074509806930000005" alpha="1" colorSpace="deviceRGB"/>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="descriptionLabel" destination="QvO-eZ-PnA" id="bWJ-os-kZa"/>
@@ -254,20 +90,20 @@
                                         <rect key="frame" x="0.0" y="258" width="320" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.85098046059999999" green="0.87058830259999997" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QKy-78-j0Y">
                                         <rect key="frame" x="0.0" y="288" width="320" height="157"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.85098046059999999" green="0.87058830259999997" blue="0.87450987099999999" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Details" id="qtd-s2-L0q">
                         <barButtonItem key="backBarButtonItem" title="Movies" id="kO2-hP-xXw"/>
@@ -288,9 +124,14 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="B2E-LX-cp9" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xge-4Z-M4j">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="xge-4Z-M4j">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.89411771299999998" green="0.7254902124" blue="0.1647058874" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="barTintColor" red="0.078431375324726105" green="0.078431375324726105" blue="0.074509806931018829" alpha="1" colorSpace="deviceRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.89411771297454834" green="0.72549021244049072" blue="0.16470588743686676" alpha="1" colorSpace="deviceRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
