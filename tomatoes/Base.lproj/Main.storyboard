@@ -171,7 +171,7 @@
             </objects>
             <point key="canvasLocation" x="876" y="510"/>
         </scene>
-        <!--Movies Table View Controller-->
+        <!--Movies-->
         <scene sceneID="Qjh-Hc-Blf">
             <objects>
                 <tableViewController id="Yjn-0R-TY1" customClass="MoviesTableViewController" customModule="tomatoes" customModuleProvider="target" sceneMemberID="viewController">
@@ -179,10 +179,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <activityIndicatorView key="tableFooterView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" id="m17-iN-x61">
-                            <rect key="frame" x="0.0" y="137" width="320" height="20"/>
+                        <label key="tableFooterView" hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Network error" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="07x-se-yC9">
+                            <rect key="frame" x="0.0" y="-21" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </activityIndicatorView>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="118" id="to1-M5-dMY" customClass="MovieTableViewCell" customModule="tomatoes" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -222,13 +225,16 @@
                             <outlet property="delegate" destination="Yjn-0R-TY1" id="voX-lp-u6S"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="HfY-Lb-Y6z"/>
+                    <navigationItem key="navigationItem" title="Movies" id="HfY-Lb-Y6z"/>
+                    <connections>
+                        <outlet property="networkErrorLabel" destination="07x-se-yC9" id="ZXF-6g-obY"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9UJ-Gz-tt1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="527" y="1039"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Details-->
         <scene sceneID="Qp5-XX-Uji">
             <objects>
                 <viewController id="fxN-Ok-Sa3" customClass="DetailViewController" customModule="tomatoes" customModuleProvider="target" sceneMemberID="viewController">
@@ -263,7 +269,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qtd-s2-L0q"/>
+                    <navigationItem key="navigationItem" title="Details" id="qtd-s2-L0q">
+                        <barButtonItem key="backBarButtonItem" title="Movies" id="kO2-hP-xXw"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="descriptionLabel" destination="QKy-78-j0Y" id="dD3-kd-Hne"/>
                         <outlet property="image" destination="PPm-VJ-MXU" id="JZ5-M0-6f8"/>

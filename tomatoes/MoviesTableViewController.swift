@@ -11,6 +11,8 @@ import UIKit
 class MoviesTableViewController: UITableViewController {
 
     var movies: [NSDictionary]! = []
+    var myRefreshControl:UIRefreshControl!
+    @IBOutlet weak var networkErrorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,18 +27,6 @@ class MoviesTableViewController: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        let YourApiKey = "naxm8cmrb6httu74m8t5hgfu" // Fill with the key you registered at http://developer.rottentomatoes.com
-        let RottenTomatoesURLString = "http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json?apikey=" + YourApiKey
-        let request = NSMutableURLRequest(URL: NSURL.URLWithString(RottenTomatoesURLString))
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler:{ (response, data, error) in
-            var errorValue: NSError? = nil
-            let dictionary = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &errorValue) as NSDictionary
-//            println(dictionary)
-            self.movies = dictionary["movies"] as [NSDictionary]
-            println("\(self.movies.count) movies found");
-
-            self.tableView.reloadData()
-        })
         /*
         let manager = AFHTTPRequestOperationManager()
         manager.GET(
@@ -51,6 +41,32 @@ class MoviesTableViewController: UITableViewController {
                 println("Error: " + error.localizedDescription)
         })
         */
+        
+        self.myRefreshControl = UIRefreshControl()
+        self.myRefreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.myRefreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.addSubview(myRefreshControl)
+        
+        refresh(self)
+    }
+    
+    func refresh(sender:AnyObject) {
+        let YourApiKey = "naxm8cmrb6httu74m8t5hgfu" // Fill with the key you registered at http://developer.rottentomatoes.com
+        let RottenTomatoesURLString = "http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json?apikey=" + YourApiKey
+        let request = NSMutableURLRequest(URL: NSURL.URLWithString(RottenTomatoesURLString))
+        println(RottenTomatoesURLString)
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler:{ (response, data, error) in
+            var errorValue: NSError? = nil
+
+            if (data != nil) {
+                let dictionary = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &errorValue) as NSDictionary
+                self.movies = dictionary["movies"] as [NSDictionary]
+            }
+            self.networkErrorLabel.hidden = data != nil
+            self.tableView.reloadData()
+        })
+        
+        self.myRefreshControl.endRefreshing()
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,9 +75,9 @@ class MoviesTableViewController: UITableViewController {
     }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        println("table item count called")
         return 1
     }
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
         return movies.count
