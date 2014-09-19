@@ -11,5 +11,5 @@
 
 #import <AFNetworking/AFNetworking.h>
 #import "UIImageView+AFNetworking.h"
-
+#import "M13ProgressViewRing.h"
 #endif

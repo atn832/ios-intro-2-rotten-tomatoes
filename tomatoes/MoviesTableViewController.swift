@@ -8,11 +8,14 @@
 
 import UIKit
 
-class MoviesTableViewController: UITableViewController {
+class MoviesTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var movies: [NSDictionary]! = []
-    var myRefreshControl:UIRefreshControl!
+    
     @IBOutlet weak var networkErrorLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var progressRing: M13ProgressViewRing!
+    var myRefreshControl: UIRefreshControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,21 +29,9 @@ class MoviesTableViewController: UITableViewController {
         // what does this do??
         tableView.delegate = self
         tableView.dataSource = self
-        
-        /*
-        let manager = AFHTTPRequestOperationManager()
-        manager.GET(
-            "http://example.com/resources.json",
-            parameters: nil,
-            success: { (operation: AFHTTPRequestOperation!,
-                responseObject: AnyObject!) in
-                println("JSON: " + responseObject.description)
-            },
-            failure: { (operation: AFHTTPRequestOperation!,
-                error: NSError!) in
-                println("Error: " + error.localizedDescription)
-        })
-        */
+
+        // progress ring is displayed only on initial load
+        progressRing.indeterminate = true
         
         self.myRefreshControl = UIRefreshControl()
         self.myRefreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
@@ -66,6 +57,7 @@ class MoviesTableViewController: UITableViewController {
             }
             self.networkErrorLabel.hidden = data != nil
             self.tableView.reloadData()
+            self.progressRing.hidden = true
         })
         
         self.myRefreshControl.endRefreshing()
@@ -76,16 +68,16 @@ class MoviesTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
         return movies.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("MovieCell") as MovieTableViewCell
         cell.titleLabel.text = "the title section \(indexPath)"
         let movie = movies[indexPath.row]

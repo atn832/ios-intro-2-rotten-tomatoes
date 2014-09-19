@@ -14,6 +14,7 @@
 		3608F5A619BFE4CE00E7412C /* tomatoesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3608F5A519BFE4CE00E7412C /* tomatoesTests.swift */; };
 		3608F5B019BFF29700E7412C /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3608F5AF19BFF29700E7412C /* MoviesTableViewController.swift */; };
 		3608F5B219BFF3DB00E7412C /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3608F5B119BFF3DB00E7412C /* MovieTableViewCell.swift */; };
+		3624A2F819CB8D7000DDFD02 /* MoviesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624A2F719CB8D7000DDFD02 /* MoviesTableView.swift */; };
 		3627DA1819C650E600FA0FE5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3627DA1719C650E600FA0FE5 /* DetailViewController.swift */; };
 		ACFF1303786342A6BB2955CA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F30D6D57CE5B4062AAF6CBD8 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		3608F5A519BFE4CE00E7412C /* tomatoesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tomatoesTests.swift; sourceTree = "<group>"; };
 		3608F5AF19BFF29700E7412C /* MoviesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
 		3608F5B119BFF3DB00E7412C /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		3624A2F719CB8D7000DDFD02 /* MoviesTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesTableView.swift; sourceTree = "<group>"; };
 		3627DA1719C650E600FA0FE5 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		363C27AD19C653F900976AB2 /* MyBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyBridgingHeader.h; sourceTree = "<group>"; };
 		AFF38F9852BA47BB845D7987 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				3608F5AF19BFF29700E7412C /* MoviesTableViewController.swift */,
 				3608F5B119BFF3DB00E7412C /* MovieTableViewCell.swift */,
 				3627DA1719C650E600FA0FE5 /* DetailViewController.swift */,
+				3624A2F719CB8D7000DDFD02 /* MoviesTableView.swift */,
 			);
 			path = tomatoes;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3624A2F819CB8D7000DDFD02 /* MoviesTableView.swift in Sources */,
 				3608F5B019BFF29700E7412C /* MoviesTableViewController.swift in Sources */,
 				3608F59519BFE4CE00E7412C /* ViewController.swift in Sources */,
 				3627DA1819C650E600FA0FE5 /* DetailViewController.swift in Sources */,
