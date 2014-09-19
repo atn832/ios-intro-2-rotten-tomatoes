@@ -2,7 +2,7 @@
 
 This is a demo application for displaying the latest box office movies using the [RottenTomatoes API](http://www.rottentomatoes.com/).
 
-Time spent: 7 hours spent in total
+Time spent: 8 hours spent in total
 
 Completed user stories:
  * [x] User can view a list of movies from Rotten Tomatoes. Poster images must be loading asynchronously.
